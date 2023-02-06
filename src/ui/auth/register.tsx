@@ -1,17 +1,17 @@
-import styles from './Auth.module.css'
+import styles from "./Auth.module.css";
+import { userStorageAdapter } from "src/services/storageAdapter";
 
 const RegisterComponent = () => {
-    return(
-        <div className={styles.container}>
-            <div className={styles.left}>
-                left content
-            </div>
+  const storage = userStorageAdapter();
+  console.log(storage.user);
 
-            <div className={styles.right}>
-                right content
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className={styles.container}>
+      <div className={styles.left}>left content</div>
 
-export default RegisterComponent
+      <div className={styles.right}>right content</div>
+    </div>
+  );
+};
+
+export default RegisterComponent;

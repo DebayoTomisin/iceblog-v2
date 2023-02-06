@@ -12,7 +12,7 @@ function Login() {
 
   const { user, loginAuthenticate } = useLoginAuthenticate();
 
-  if (!!user) {
+  if (!!user.email) {
     router.push("/");
   }
 
